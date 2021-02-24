@@ -32,7 +32,8 @@ public class CreateDolphinScheduler {
 	 * create dolphin scheduler db
 	 * @param args args
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ClassNotFoundException {
+		Class.forName("com.mysql.jdbc.Driver");
 		DolphinSchedulerManager dolphinSchedulerManager = new DolphinSchedulerManager();
 		try {
 			dolphinSchedulerManager.initDolphinScheduler();
